@@ -1,0 +1,94 @@
+$date
+	Thu Oct 25 21:39:18 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ALU_control_tb $end
+$var wire 4 ! alu_operation [0:3] $end
+$var reg 2 " aluop [0:1] $end
+$var reg 3 # func3 [0:2] $end
+$var reg 7 $ func7 [0:6] $end
+$scope module A $end
+$var wire 2 % aluop [0:1] $end
+$var wire 3 & func3 [0:2] $end
+$var wire 7 ' func7 [0:6] $end
+$var wire 1 ( t $end
+$var wire 1 ) t1 $end
+$var wire 1 * t2 $end
+$var wire 1 + t3 $end
+$var wire 1 , w $end
+$var wire 1 - w1 $end
+$var wire 1 . w2 $end
+$var wire 1 / w3 $end
+$var wire 4 0 alu_operation [0:3] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 0
+0/
+1.
+0-
+1,
+1+
+0*
+1)
+0(
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b10 !
+$end
+#5
+b10 #
+b10 &
+#10
+b110 !
+b110 0
+1/
+b1 "
+b1 %
+#15
+0,
+b10 !
+b10 0
+0.
+0/
+1*
+0+
+b0 #
+b0 &
+b10 "
+b10 %
+#20
+b111 !
+b111 0
+1-
+1(
+b100000 $
+b100000 '
+#25
+0*
+b1 !
+b1 0
+0)
+0-
+b111 #
+b111 &
+b0 $
+b0 '
+#35
+b0 !
+b0 0
+0(
+b110 #
+b110 &
+#40

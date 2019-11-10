@@ -1,0 +1,127 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fb2816091e0 .scope module, "ALU_control_tb" "ALU_control_tb" 2 5;
+ .timescale 0 0;
+v0x7fb28161a890_0 .net "alu_operation", 0 3, L_0x7fb28161bf10;  1 drivers
+v0x7fb28161a920_0 .var "aluop", 0 1;
+v0x7fb28161a9b0_0 .var "func3", 0 2;
+v0x7fb28161aa40_0 .var "func7", 0 6;
+S_0x7fb281609340 .scope module, "A" "ALU_control" 2 11, 3 4 0, S_0x7fb2816091e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 2 "aluop"
+    .port_info 1 /INPUT 7 "func7"
+    .port_info 2 /INPUT 3 "func3"
+    .port_info 3 /OUTPUT 4 "alu_operation"
+L_0x7fb28161aaf0 .functor NOT 1, L_0x7fb28161aba0, C4<0>, C4<0>, C4<0>;
+L_0x7fb28161acc0 .functor AND 1, L_0x7fb28161aaf0, L_0x7fb28161ad70, C4<1>, C4<1>;
+L_0x7fb28161ae50 .functor AND 1, L_0x7fb28161af40, L_0x7fb28161b060, C4<1>, C4<1>;
+L_0x7fb28161b1c0 .functor NOT 1, L_0x7fb28161b230, C4<0>, C4<0>, C4<0>;
+L_0x7fb28161b300 .functor AND 1, L_0x7fb28161b1c0, L_0x7fb28161b3e0, C4<1>, C4<1>;
+L_0x7fb28161b4c0 .functor OR 1, L_0x7fb28161b300, L_0x7fb28161ae50, C4<0>, C4<0>;
+L_0x7fb28161b5b0 .functor NOT 1, L_0x7fb28161b660, C4<0>, C4<0>, C4<0>;
+L_0x7fb28161b7c0 .functor AND 1, L_0x7fb28161b870, L_0x7fb28161b5b0, C4<1>, C4<1>;
+L_0x7fb28161b950 .functor NOT 1, L_0x7fb28161ba10, C4<0>, C4<0>, C4<0>;
+L_0x7fb28161b140 .functor OR 1, L_0x7fb28161b7c0, L_0x7fb28161b950, C4<0>, C4<0>;
+L_0x7fb28161bc40 .functor XOR 1, L_0x7fb28161bd30, L_0x7fb28161be10, C4<0>, C4<0>;
+L_0x7fb28161c070 .functor AND 1, L_0x7fb28161bc40, L_0x7fb28161c160, C4<1>, C4<1>;
+v0x7fb2816094a0_0 .net *"_s10", 0 0, L_0x7fb28161af40;  1 drivers
+v0x7fb2816194b0_0 .net *"_s12", 0 0, L_0x7fb28161b060;  1 drivers
+v0x7fb281619560_0 .net *"_s15", 0 0, L_0x7fb28161b230;  1 drivers
+v0x7fb281619620_0 .net *"_s18", 0 0, L_0x7fb28161b3e0;  1 drivers
+v0x7fb2816196d0_0 .net *"_s2", 0 0, L_0x7fb28161aba0;  1 drivers
+v0x7fb2816197c0_0 .net *"_s20", 0 0, L_0x7fb28161b4c0;  1 drivers
+v0x7fb281619870_0 .net *"_s24", 0 0, L_0x7fb28161b660;  1 drivers
+v0x7fb281619920_0 .net *"_s27", 0 0, L_0x7fb28161b870;  1 drivers
+v0x7fb2816199d0_0 .net *"_s30", 0 0, L_0x7fb28161ba10;  1 drivers
+v0x7fb281619ae0_0 .net *"_s32", 0 0, L_0x7fb28161b140;  1 drivers
+v0x7fb281619b90_0 .net *"_s36", 0 0, L_0x7fb28161bd30;  1 drivers
+v0x7fb281619c40_0 .net *"_s38", 0 0, L_0x7fb28161be10;  1 drivers
+v0x7fb281619cf0_0 .net *"_s4", 0 0, L_0x7fb28161acc0;  1 drivers
+v0x7fb281619da0_0 .net *"_s40", 0 0, L_0x7fb28161c070;  1 drivers
+v0x7fb281619e50_0 .net *"_s44", 0 0, L_0x7fb28161c160;  1 drivers
+v0x7fb281619f00_0 .net *"_s7", 0 0, L_0x7fb28161ad70;  1 drivers
+v0x7fb281619fb0_0 .net "alu_operation", 0 3, L_0x7fb28161bf10;  alias, 1 drivers
+v0x7fb28161a140_0 .net "aluop", 0 1, v0x7fb28161a920_0;  1 drivers
+v0x7fb28161a1d0_0 .net "func3", 0 2, v0x7fb28161a9b0_0;  1 drivers
+v0x7fb28161a280_0 .net "func7", 0 6, v0x7fb28161aa40_0;  1 drivers
+v0x7fb28161a330_0 .net "t", 0 0, L_0x7fb28161bc40;  1 drivers
+v0x7fb28161a3d0_0 .net "t1", 0 0, L_0x7fb28161b5b0;  1 drivers
+v0x7fb28161a470_0 .net "t2", 0 0, L_0x7fb28161b7c0;  1 drivers
+v0x7fb28161a510_0 .net "t3", 0 0, L_0x7fb28161b950;  1 drivers
+v0x7fb28161a5b0_0 .net "w", 0 0, L_0x7fb28161aaf0;  1 drivers
+v0x7fb28161a650_0 .net "w1", 0 0, L_0x7fb28161ae50;  1 drivers
+v0x7fb28161a6f0_0 .net "w2", 0 0, L_0x7fb28161b1c0;  1 drivers
+v0x7fb28161a790_0 .net "w3", 0 0, L_0x7fb28161b300;  1 drivers
+L_0x7fb28161aba0 .part v0x7fb28161a920_0, 1, 1;
+L_0x7fb28161ad70 .part v0x7fb28161a920_0, 1, 1;
+L_0x7fb28161af40 .part v0x7fb28161aa40_0, 5, 1;
+L_0x7fb28161b060 .part v0x7fb28161a920_0, 1, 1;
+L_0x7fb28161b230 .part v0x7fb28161a920_0, 1, 1;
+L_0x7fb28161b3e0 .part v0x7fb28161a920_0, 0, 1;
+L_0x7fb28161b660 .part v0x7fb28161a9b0_0, 2, 1;
+L_0x7fb28161b870 .part v0x7fb28161a920_0, 1, 1;
+L_0x7fb28161ba10 .part v0x7fb28161a920_0, 1, 1;
+L_0x7fb28161bd30 .part v0x7fb28161aa40_0, 5, 1;
+L_0x7fb28161be10 .part v0x7fb28161a9b0_0, 0, 1;
+L_0x7fb28161bf10 .concat8 [ 1 1 1 1], L_0x7fb28161c070, L_0x7fb28161b140, L_0x7fb28161b4c0, L_0x7fb28161acc0;
+L_0x7fb28161c160 .part v0x7fb28161a920_0, 1, 1;
+    .scope S_0x7fb2816091e0;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "ALU_control.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fb2816091e0 {0 0 0};
+    %vpi_call 2 17 "$display", "\012LOAD instruction" {0 0 0};
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x7fb28161a920_0, 0, 2;
+    %pushi/vec4 0, 0, 7;
+    %store/vec4 v0x7fb28161aa40_0, 0, 7;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x7fb28161a9b0_0, 0, 3;
+    %vpi_call 2 21 "$monitor", "alu_op=%2b func7=%7b func3=%3b    alu_operation=%4b", v0x7fb28161a920_0, v0x7fb28161aa40_0, v0x7fb28161a9b0_0, v0x7fb28161a890_0 {0 0 0};
+    %delay 5, 0;
+    %vpi_call 2 23 "$display", "\012Store Instruction" {0 0 0};
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x7fb28161a9b0_0, 0, 3;
+    %delay 5, 0;
+    %vpi_call 2 26 "$display", "\012Branch if Equal" {0 0 0};
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x7fb28161a920_0, 0, 2;
+    %delay 5, 0;
+    %vpi_call 2 29 "$display", "\012R-type" {0 0 0};
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x7fb28161a920_0, 0, 2;
+    %pushi/vec4 0, 0, 7;
+    %store/vec4 v0x7fb28161aa40_0, 0, 7;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x7fb28161a9b0_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 32, 0, 7;
+    %store/vec4 v0x7fb28161aa40_0, 0, 7;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 7;
+    %store/vec4 v0x7fb28161aa40_0, 0, 7;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x7fb28161a9b0_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 7;
+    %store/vec4 v0x7fb28161aa40_0, 0, 7;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x7fb28161a9b0_0, 0, 3;
+    %delay 5, 0;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x7fb28161a9b0_0, 0, 3;
+    %delay 5, 0;
+    %vpi_call 2 44 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "ALU_control_tb.v";
+    "./ALU_control.v";
