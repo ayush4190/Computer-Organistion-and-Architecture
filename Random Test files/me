@@ -1,0 +1,37 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fb591404a00 .scope module, "add_tb" "add_tb" 2 2;
+ .timescale 0 0;
+v0x7fb591414e00_0 .var "a", 0 0;
+v0x7fb591414ea0_0 .var "b", 0 0;
+v0x7fb591414f50_0 .net "c", 0 0, L_0x7fb591415020;  1 drivers
+S_0x7fb591404b60 .scope module, "a1" "add" 2 5, 3 1 0, S_0x7fb591404a00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "c"
+v0x7fb591404cc0_0 .net "a", 0 0, v0x7fb591414e00_0;  1 drivers
+v0x7fb591414c60_0 .net "b", 0 0, v0x7fb591414ea0_0;  1 drivers
+v0x7fb591414d00_0 .net "c", 0 0, L_0x7fb591415020;  alias, 1 drivers
+L_0x7fb591415020 .arith/sum 1, v0x7fb591414e00_0, v0x7fb591414ea0_0;
+    .scope S_0x7fb591404a00;
+T_0 ;
+    %vpi_call 2 8 "$monitor", "a=%b b=%b c=%b", v0x7fb591414e00_0, v0x7fb591414ea0_0, v0x7fb591414f50_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fb591414e00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fb591414ea0_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "me_1b.v";
+    "./me.v";

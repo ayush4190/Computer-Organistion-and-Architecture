@@ -1,0 +1,27 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fd893601fe0 .scope module, "halfadder" "halfadder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "sum"
+    .port_info 3 /OUTPUT 1 "carry"
+o0x10182a008 .functor BUFZ 1, C4<z>; HiZ drive
+o0x10182a038 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7fd893612220 .functor XOR 1, o0x10182a008, o0x10182a038, C4<0>, C4<0>;
+L_0x7fd8936122f0 .functor AND 1, o0x10182a008, o0x10182a038, C4<1>, C4<1>;
+v0x7fd893602140_0 .net "a", 0 0, o0x10182a008;  0 drivers
+v0x7fd893611ff0_0 .net "b", 0 0, o0x10182a038;  0 drivers
+v0x7fd893612090_0 .net "carry", 0 0, L_0x7fd8936122f0;  1 drivers
+v0x7fd893612120_0 .net "sum", 0 0, L_0x7fd893612220;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "ha1.v";
